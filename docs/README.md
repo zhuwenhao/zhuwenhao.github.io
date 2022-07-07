@@ -1,15 +1,4 @@
-- 动画
-  + [名侦探柯南](/anime/detective-conan.md)
-    - [TV](/anime/detective-conan.md#tv)
-    - [OVA](/anime/detective-conan.md#ova)
-  + [魔术快斗](/anime/magic-kaito.md)
-    - [魔术快斗1412](/anime/magic-kaito.md#魔术快斗1412)
-  + [加速世界](/anime/accel-world.md)
-    + [TV](/anime/accel-world.md#tv)
-    + [OVA](/anime/accel-world.md#ova)
-    + [剧场版](/anime/accel-world.md#剧场版)
-    + [小加速世界](/anime/accel-world.md#小加速世界)
-- [电视剧](/tv/)
-- 软件
-  + [Linux](/software/linux.md)
-  + [Windows](/software/windows.md)
+---
+home: true
+heroText: 猪蚊耗的笔记本
+---

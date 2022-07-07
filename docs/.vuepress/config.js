@@ -1,67 +1,110 @@
 module.exports = {
-    locales: {
-        '/': {
-            lang: 'zh',
-            title: '猪蚊耗的笔记本',
-            description: '猪蚊耗的笔记本'
-        }
+  head: [
+    [
+      "link",
+      {
+        rel: "apple-touch-icon",
+        sizes: "180x180",
+        href: "/favicon/apple-touch-icon.png",
+      },
+    ],
+    ["link", { rel: "icon", href: "/favicon/favicon.ico" }],
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        href: "/favicon/favicon-16x16.png",
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        href: "/favicon/favicon-32x32.png",
+      },
+    ],
+    ["link", { rel: "manifest", href: "/favicon/site.webmanifest" }],
+  ],
+  locales: {
+    "/": {
+      lang: "zh",
+      title: "猪蚊耗的笔记本",
+      description: "猪蚊耗的笔记本",
     },
-    themeConfig: {
-        nav: [
-            {
-                text: '动画',
-                ariaLabel: '动画',
-                items: [
-                    { text: '名侦探柯南', link: '/anime/detective-conan' },
-                    { text: '魔术快斗', link: '/anime/magic-kaito' },
-                    { text: '加速世界', link: '/anime/accel-world' }
-                ]
-            },
-            { text: '电视剧', link: '/tv/' },
-            {
-                text: '软件',
-                ariaLabel: '软件',
-                items: [
-                    { text: 'Linux', link: '/software/linux' },
-                    { text: 'Windows', link: '/software/windows' }
-                ]
-            }
+  },
+  markdown: {
+    lineNumbers: true,
+  },
+  theme: "vdoing",
+  themeConfig: {
+    displayAllHeaders: true,
+    logo: "/favicon/android-chrome-192x192.png",
+    nav: [
+      {
+        text: "梦",
+        link: "https://meng.zhuwenhao.me",
+      },
+      {
+        text: "动画",
+        items: [
+          { text: "名侦探柯南", link: "/anime/detective-conan/" },
+          { text: "魔术快斗", link: "/anime/magic-kaito/" },
+          { text: "加速世界", link: "/anime/accel-world/" },
         ],
-        sidebar: {
-            '/movie/happy-birthday/': [
-                {
-                    title: '生日快乐',
-                    collapsable: false,
-                    children: [
-                        '',
-                        '1996',
-                        '1997',
-                        '1998',
-                        '1999',
-                        '2000',
-                        '2001',
-                        '2002',
-                        '2003',
-                        '2004',
-                        '2005',
-                        '2006',
-                        '2007',
-                        '2008',
-                        '2009',
-                        '2010',
-                        '2011',
-                        '2012',
-                        '2013',
-                        '2014',
-                        '2015',
-                        '2016',
-                        '2017',
-                        '2018',
-                        '2019'
-                    ]
-                }
-            ]
+      },
+      {
+        text: "电视剧",
+        items: [{ text: "名侦探柯南", link: "/tv/detective-conan/" }],
+      },
+      {
+        text: "教程",
+        items: [
+          { text: "Linux", link: "/tutorial/linux/" },
+          { text: "Shadowsocks-rust", link: "/tutorial/shadowsocks-rust/" },
+          { text: "Caddy", link: "/tutorial/caddy/" },
+          { text: "RSSBot", link: "/tutorial/rss-bot/" },
+        ],
+      },
+      {
+        text: "索引",
+        items: [
+          { text: "分类", link: "/categories/" },
+          { text: "标签", link: "/tags/" },
+          { text: "归档", link: "/archives/" },
+        ],
+      },
+    ],
+
+    // vdoing theme
+    blogger: {
+      avatar: "/avatar.png",
+      name: "猪蚊耗",
+    },
+    bodyBgImg: "/bg.jpg",
+    bodyBgImgOpacity: 0.8,
+    footer: { createYear: 2019, copyrightInfo: "猪蚊耗" },
+    sidebarOpen: false,
+    social: {
+      icons: [
+        {
+          iconClass: "icon-youjian",
+          title: "邮件",
+          link: "mailto:m@zhuwenhao.me",
         },
-        displayAllHeaders: true
-    }
-}
+        {
+          iconClass: "icon-github",
+          title: "Github",
+          link: "https://github.com/zhuwenhao",
+        },
+      ],
+    },
+    titleBadge: false,
+    updateBar: {
+      showToArticle: false,
+    },
+  },
+};
