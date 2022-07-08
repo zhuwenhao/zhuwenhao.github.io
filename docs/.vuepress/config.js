@@ -1,4 +1,5 @@
 module.exports = {
+  dest: "build",
   head: [
     [
       "link",
@@ -42,6 +43,7 @@ module.exports = {
   theme: "vdoing",
   themeConfig: {
     displayAllHeaders: true,
+    lastUpdated: "上次更新",
     logo: "/favicon/android-chrome-192x192.png",
     nav: [
       {
@@ -55,10 +57,6 @@ module.exports = {
           { text: "魔术快斗", link: "/anime/magic-kaito/" },
           { text: "加速世界", link: "/anime/accel-world/" },
         ],
-      },
-      {
-        text: "电视剧",
-        items: [{ text: "名侦探柯南", link: "/tv/detective-conan/" }],
       },
       {
         text: "教程",
@@ -78,6 +76,8 @@ module.exports = {
         ],
       },
     ],
+    repo: "zhuwenhao/notebook",
+    smoothScroll: true,
 
     // vdoing theme
     blogger: {

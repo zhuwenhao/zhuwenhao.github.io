@@ -23,6 +23,6 @@ slmgr.vbs -ato
 slmgr.vbs -dlv
 ```
 
-![KMS激活成功](https://o69o.gitee.io/images/notebook/kms-activated-success.png)
+![KMS激活成功](/images/kms-activated-success.png)
 
 [沧水的KMS激活服务](https://kms.cangshui.net) [KMS 客户端安装密钥](https://docs.microsoft.com/zh-cn/windows-server/get-started/kmsclientkeys)

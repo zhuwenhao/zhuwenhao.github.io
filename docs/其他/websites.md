@@ -30,3 +30,5 @@ tags:
 [Favicon Generator](https://favicon.io)
 
 [ASCII Tree Generator](https://tree.nathanfriend.io)
+
+[Chmod Calculator](https://chmodcommand.com)

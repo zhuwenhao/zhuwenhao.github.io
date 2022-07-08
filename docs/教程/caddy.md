@@ -65,6 +65,11 @@ example.com, www.example.com {
   root * /var/www/example.com
   file_server
 
+  handle_errors {
+    rewrite * /errors/{http.error.status_code}.html
+    file_server
+  }
+
   route /webhook {
     webhook {
       repo https://github.com/example/foobar.git
