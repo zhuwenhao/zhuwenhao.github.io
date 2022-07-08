@@ -35,5 +35,4 @@ jobs:
         with:
           folder: build
           token: ${{ secrets.GITHUB_ACTIONS_DEPLOY }}
-          branch: master
           repository-name: zhuwenhao/zhuwenhao.github.io
