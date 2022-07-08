@@ -43,6 +43,9 @@ module.exports = {
   theme: "vdoing",
   themeConfig: {
     displayAllHeaders: true,
+    docsDir: "docs",
+    editLinks: true,
+    editLinkText: "在 GitHub 上编辑此页",
     lastUpdated: "上次更新",
     logo: "/favicon/android-chrome-192x192.png",
     nav: [
