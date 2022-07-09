@@ -34,5 +34,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: build
-          token: ${{ secrets.GITHUB_ACTIONS_DEPLOY }}
-          repository-name: zhuwenhao/zhuwenhao.github.io
+          commit-message: Github Actions build and deploy

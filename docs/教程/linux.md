@@ -21,13 +21,13 @@ firewall-cmd --query-port=6666/tcp
 添加端口
 
 ```bash
-firewall-cmd -add-port=6666/tcp --permanent
+firewall-cmd --add-port=6666/tcp --permanent
 ```
 
 移除端口
 
 ```bash
-firewall-cmd -remove-port=6666/tcp --permanent
+firewall-cmd --remove-port=6666/tcp --permanent
 ```
 
 重新加载

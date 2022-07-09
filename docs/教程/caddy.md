@@ -15,7 +15,7 @@ tags:
 
 ## 下载
 
-勾选 `http.handlers.webhook` 模块并 [下载](https://caddyserver.com/download)对应平台的二进制文件
+打开 [下载](https://caddyserver.com/download) 页面，平台选择 `Linux amd64` ，点选 `http.handlers.webhook` 模块，然后点击下载按钮
 
 ## 安装
 
@@ -23,6 +23,12 @@ tags:
 
 ```bash
 $ sudo mv caddy_linux_amd64_custom /usr/bin/caddy
+```
+
+修改 `caddy` 权限
+
+```bash
+$ sudo chmod 777 /usr/bin/caddy
 ```
 
 测试是否有效
