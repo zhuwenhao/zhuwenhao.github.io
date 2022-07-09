@@ -35,3 +35,5 @@ jobs:
         with:
           folder: build
           commit-message: Github Actions build and deploy
+          clean-exclude: |
+            CNAME
