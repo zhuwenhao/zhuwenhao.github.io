@@ -45,7 +45,7 @@ module.exports = {
     displayAllHeaders: true,
     docsDir: "docs",
     editLinks: true,
-    editLinkText: "在 GitHub 上编辑此页",
+    editLinkText: "编辑此页",
     lastUpdated: "上次更新",
     logo: "/favicon/android-chrome-192x192.png",
     nav: [
@@ -91,9 +91,10 @@ module.exports = {
     footer: { createYear: 2019, copyrightInfo: "猪蚊耗" },
     sidebarOpen: false,
     social: {
+      iconfontCssFile: "/iconfont/iconfont.css",
       icons: [
         {
-          iconClass: "icon-youjian",
+          iconClass: "icon-email",
           title: "邮件",
           link: "mailto:m@zhuwenhao.me",
         },
@@ -101,6 +102,11 @@ module.exports = {
           iconClass: "icon-github",
           title: "Github",
           link: "https://github.com/zhuwenhao",
+        },
+        {
+          iconClass: "icon-gitlab",
+          title: "Gitlab",
+          link: "https://gitlab.com/zhuwenhao",
         },
       ],
     },
