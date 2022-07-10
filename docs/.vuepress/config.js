@@ -65,7 +65,6 @@ module.exports = {
         text: "教程",
         items: [
           { text: "Linux", link: "/tutorial/linux/" },
-          { text: "Shadowsocks-rust", link: "/tutorial/shadowsocks-rust/" },
           { text: "Caddy", link: "/tutorial/caddy/" },
           { text: "RSSBot", link: "/tutorial/rss-bot/" },
         ],
