@@ -34,6 +34,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: build
+          branch: pages
           commit-message: Github Actions build and deploy
           clean-exclude: |
             CNAME
