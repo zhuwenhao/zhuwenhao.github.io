@@ -39,3 +39,4 @@ jobs:
           clean-exclude: |
             CNAME
             .nojekyll
+            .gitlab-ci.yml
