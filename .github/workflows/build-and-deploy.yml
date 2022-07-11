@@ -38,3 +38,4 @@ jobs:
           commit-message: Github Actions build and deploy
           clean-exclude: |
             CNAME
+            .nojekyll
