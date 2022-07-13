@@ -30,6 +30,9 @@ jobs:
       - name: Build
         run: yarn docs:build
 
+      - name: Replace 404 page
+        run: mv /build/errors/404.html /build/
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
