@@ -28,7 +28,7 @@ $ sudo mv caddy_linux_amd64_custom /usr/bin/caddy
 修改 `caddy` 权限
 
 ```bash
-$ sudo chmod 777 /usr/bin/caddy
+$ sudo chmod 755 /usr/bin/caddy
 ```
 
 测试是否有效
