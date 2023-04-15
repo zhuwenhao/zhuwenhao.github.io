@@ -50,10 +50,6 @@ module.exports = {
     logo: "/favicon/android-chrome-192x192.png",
     nav: [
       {
-        text: "梦",
-        link: "https://meng.zhuwenhao.me",
-      },
-      {
         text: "动画",
         items: [
           { text: "名侦探柯南", link: "/anime/detective-conan/" },
