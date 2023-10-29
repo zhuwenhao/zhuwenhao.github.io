@@ -1,45 +1,14 @@
 ---
-sidebar: auto
 title: 名侦探柯南
 date: 1996-01-08 00:00:00
-permalink: /anime/detective-conan/
-categories: 
+category: 
   - 动画
-tags:
-  -
 sticky: 1
 ---
 
 # 名侦探柯南
 
-::: cardList
-```yaml
-- name: APTX4869
-  desc: 名侦探柯南事务所
-  link: https://bbs.aptx.cn/forum.php
-- name: CONANS
-  desc: 星光字幕组
-  link: https://web.archive.org/web/20160602224250/http://www.conans.cc/forum.php
-- name: SBSUB
-  desc: 银色子弹字幕组
-  link: https://www.sbsub.com
-- name: WMSUB
-  desc: 风车字幕组
-  link: https://share.dmhy.org/topics/list/team_id/454
-- name: OCTSUB
-  desc: 章魚字幕组
-  link: https://share.dmhy.org/topics/list/user_id/105333
-- name: 丸子家族
-  desc: 丸子家族
-  link: https://share.dmhy.org/topics/list/team_id/488
-```
-:::
-
-<!--
-[名侦探柯南事务所 - 动漫花园](https://share.dmhy.org/topics/list/team_id/75)\
-[星光字幕组 - 动漫花园](https://share.dmhy.org/topics/list/team_id/299)\
-[银色子弹字幕组 - 动漫花园](https://share.dmhy.org/topics/list/team_id/576)
--->
+<!-- more -->
 
 ## TV
 
@@ -1270,6 +1239,7 @@ sticky: 1
 | 154 | 园子的危险夏日物语（后篇） | APTX4869 | 720P | FCD20D24 | |
 | 158 | 沉默的环状线 | SBSUB | 1080P | 2BFCB296 | |
 | 162 | | | | | |
+| 165 | 少年侦探团消失事件 | SBSUB | 1080P | 940C3238 | |
 | 166-168 | 鸟取蜘蛛屋宇的妖怪 | APTX4869 | 480P | 259EC19B | |
 | 176-178 | 与黑衣组织的再会 | CONANS | 720P | 530C2186 | |
 | 182 | 九道门大搜索 | SBSUB | 1080P | AA32E7A3 | |
@@ -1297,10 +1267,14 @@ sticky: 1
 | 307 | 遗留下来的无声证词（上集） | CONANS | 720P | 640B2EBE | |
 | 308 | 遗留下来的无声证词（下集） | CONANS | 720P | 6069BF5E | |
 | 309-311 | 与黑衣组织的接触 | SBSUB | 1080P | 6DD24337 | |
+| 329 | 金钱买不到的友情（前篇） | SBSUB | 1080P | D3824E78 | |
+| 330 | 金钱买不到的友情（后篇） | SBSUB | 1080P | A0A70604 | |
 | 340 | 隐藏在厕所里的秘密（上集） | CONANS | 720P | D8D62E52 | |
 | 341 | 隐藏在厕所里的秘密（下集） | CONANS | 720P | D855827E | |
 | 342 | | | | | |
 | 356 | | | | | |
+| 368 | 女巫居住的糖果屋 | SBSUB | 1080P | 247F057B | |
+| 376 | | | | | |
 | 384 | | | | | |
 | 394 | 奇异房屋中的大冒险（封印篇） | APTX4869 | 720P | 79E84FD3 | |
 | 395 | 奇异房屋中的大冒险（机关篇） | APTX4869 | 720P | 1AC4622F | |
@@ -1313,6 +1287,7 @@ sticky: 1
 | 470 | 怪盗基德与四名画（下集） | CONANS | 720P | B666BEC5 | |
 | 537 | | | | | |
 | 538 | | | | | |
+| 631 | 花钟知道真相 | SBSUB | 1080P | 73ACA2CA | |
 | 675 | | | | | |
 | 676 | | | | | |
 | 688 | | | | | |
@@ -1324,6 +1299,7 @@ sticky: 1
 | 747 | 怪盗基德vs京极真（后篇） | SBSUB | 1080P | FEC95864 | |
 | 751 | 招财三色猫事件（前篇） | SBSUB | 1080P | C2E0E4DF | |
 | 752 | 招财三色猫事件（后篇） | SBSUB | 1080P | CB0487EC | |
+| 768 | 灰原哀监禁事件 | SBSUB | 1080P | CBDD77D0 | |
 | 785 | 太阁之恋名人战（前篇） | SBSUB | 1080P | 489D90A0 | |
 | 786 | 太阁之恋名人战（后篇） | SBSUB | 1080P | 270DE8BB | |
 | 836 | | | | | |
@@ -1391,3 +1367,17 @@ sticky: 1
 | 22 | | | | | |
 | 23 | | | | | |
 | 24 | | | | | |
+
+## 链接
+
+[APTX4869 - 名侦探柯南事务所](https://bbs.aptx.cn/forum.php) [动漫花园](https://share.dmhy.org/topics/list/team_id/75)
+
+[CONANS - 星光字幕组](https://web.archive.org/web/20160602224250/http://www.conans.cc/forum.php) [动漫花园](https://share.dmhy.org/topics/list/team_id/299)
+
+[SBSUB - 银色子弹字幕组](https://www.sbsub.com) [动漫花园](https://share.dmhy.org/topics/list/team_id/576)
+
+[WMSUB - 风车字幕组](https://share.dmhy.org/topics/list/team_id/454)
+
+[OCTSUB - 章魚字幕组](https://share.dmhy.org/topics/list/user_id/105333)
+
+[丸子家族](https://share.dmhy.org/topics/list/team_id/488)

@@ -1,14 +1,13 @@
 ---
 title: Linux
 date: 2022-05-08 22:34:12
-permalink: /tutorial/linux/
-categories:
+category:
   - 教程
-tags:
-  - Linux
 ---
 
 # Linux
+
+<!-- more -->
 
 ## 防火墙
 

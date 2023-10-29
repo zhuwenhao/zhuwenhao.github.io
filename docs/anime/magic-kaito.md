@@ -1,30 +1,13 @@
 ---
-sidebar: auto
 title: 魔术快斗
 date: 2010-04-17 00:00:00
-permalink: /anime/magic-kaito/
-categories: 
+category: 
   - 动画
-tags:
-  -
 ---
 
 # 魔术快斗
 
-::: cardList
-```yaml
-- name: APTX4869
-  desc: 名侦探柯南事务所
-  link: https://bbs.aptx.cn/forum.php
-- name: CASO
-  desc: 华盟字幕社
-  link: https://share.dmhy.org/topics/list/team_id/49
-```
-:::
-
-<!--
-[名侦探柯南事务所 - 动漫花园](https://share.dmhy.org/topics/list/team_id/75)
--->
+<!-- more -->
 
 ## 魔术快斗
 
@@ -71,3 +54,9 @@ tags:
 | 22 | 红色泪光 | APTX4869 | 1080P | 81D54488 | |
 | 23 | 子夜的乌鸦（前篇）其名怪盗科尔波！ | APTX4869 | 1080P | 0152AEB8 | |
 | 24 | 子夜的乌鸦（后篇）激战！是白是黑！？ | APTX4869 | 1080P | 4562AEAC | |
+
+## 链接
+
+[APTX4869 - 名侦探柯南事务所](https://bbs.aptx.cn/forum.php) [动漫花园](https://share.dmhy.org/topics/list/team_id/75)
+
+[CASO - 华盟字幕社](https://share.dmhy.org/topics/list/team_id/49)

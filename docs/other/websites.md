@@ -1,21 +1,17 @@
 ---
-sidebar: auto
 title: 各类网站
 date: 2021-07-26 17:33:40
-permalink: /other/websites/
-categories:
+category:
   - 其他
-tags:
-  -
 ---
 
 # 各类网站
 
+<!-- more -->
+
 ## 动画
 
 [動漫花園資源網](https://share.dmhy.org)
-
-[Erai-raws](https://erai-raws.info)
 
 [SubsPlease](https://subsplease.org)
 

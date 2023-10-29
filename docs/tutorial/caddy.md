@@ -1,17 +1,13 @@
 ---
-sidebar: auto
 title: Caddy
 date: 2021-07-23 10:33:16
-permalink: /tutorial/caddy/
-categories:
+category:
   - 教程
-tags:
-  - Linux
 ---
 
 # Caddy
 
-[官网](https://caddyserver.com)
+<!-- more -->
 
 ## 下载
 
@@ -57,6 +53,12 @@ $ sudo useradd --system \
 
 ## 配置
 
+创建一个名为 `example.com` 的站点目录
+
+```bash
+$ sudo mkdir -p -m 777 /var/www/example.com
+```
+
 创建一个名为 `Caddyfile` 的配置文件
 
 ```bash
@@ -71,10 +73,7 @@ example.com, www.example.com {
   root * /var/www/example.com
   file_server
 
-  handle_errors {
-    rewrite * /errors/{http.error.status_code}.html
-    file_server
-  }
+  encode zstd gzip
 
   route /webhook {
     webhook {

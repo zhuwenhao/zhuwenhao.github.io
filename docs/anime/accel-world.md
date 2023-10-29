@@ -1,34 +1,13 @@
 ---
-sidebar: auto
 title: 加速世界
 date: 2012-04-06 00:00:00
-permalink: /anime/accel-world/
-categories: 
+category: 
   - 动画
-tags:
-  -
 ---
 
 # 加速世界
 
-::: cardList
-```yaml
-- name: VCB-Studio
-  desc: VCB-Studio
-  link: https://vcb-s.com
-- name: SumiSora
-  desc: 澄空学园
-  link: https://bbs.sumisora.net
-- name: Kamigami
-  desc: 诸神字幕组
-  link: https://subs.kamigami.org
-```
-:::
-
-<!--
-[VCB-Studio - 动漫花园](https://share.dmhy.org/topics/list/team_id/581)\
-[澄空学园 - 动漫花园](https://share.dmhy.org/topics/list/team_id/58)\
-[诸神字幕组 - 动漫花园](https://share.dmhy.org/topics/list/team_id/288) -->
+<!-- more -->
 
 ## TV
 
@@ -84,3 +63,11 @@ tags:
 | 06 | VCB-Studio | SumiSora | 1080p | AE60DB6B |
 | 07 | VCB-Studio | SumiSora | 1080p | E6AED6BA |
 | 08 | VCB-Studio | SumiSora | 1080p | 2F0F136B |
+
+## 链接
+
+[VCB-Studio](https://vcb-s.com) [动漫花园](https://share.dmhy.org/topics/list/team_id/581)
+
+[SumiSora - 澄空学园](https://bbs.sumisora.net) [动漫花园](https://share.dmhy.org/topics/list/team_id/58)
+
+[Kamigami - 诸神字幕组](https://subs.kamigami.org) [动漫花园](https://share.dmhy.org/topics/list/team_id/288)

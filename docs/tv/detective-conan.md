@@ -1,27 +1,13 @@
 ---
-sidebar: auto
 title: 名侦探柯南
 date: 2006-10-02 00:00:00
-permalink: /tv/detective-conan/
-categories:
+category:
   - 电视剧
-tags:
-  -
 ---
 
 # 名侦探柯南
 
-::: cardList
-```yaml
-- name: APTX4869
-  desc: 名侦探柯南事务所
-  link: https://bbs.aptx.cn/forum.php
-```
-:::
-
-<!--
-[名侦探柯南事务所 - 动漫花园](https://share.dmhy.org/topics/list/team_id/75)
--->
+<!-- more -->
 
 ## 特别篇
 
@@ -49,3 +35,7 @@ tags:
 | 11 | 借吻杀人，20年后的复仇！完美的不在场证明之谜！ | APTX4869 | 720P | 0E7927A2 | |
 | 12 | 人是我杀的！3名单独犯？破解伪装杀人之谜！ | APTX4869 | 720P | 85EA8AE9 | |
 | 13 | 小兰之死！真凶对天才侦探的最后挑战 破解白色房间之谜！ | APTX4869 | 720P | E79C948A | |
+
+## 链接
+
+[APTX4869 - 名侦探柯南事务所](https://bbs.aptx.cn/forum.php) [动漫花园](https://share.dmhy.org/topics/list/team_id/75)
