@@ -8,11 +8,12 @@ export default defineUserConfig({
   lang: "zh-CN",
   title: "猪蚊耗的笔记本",
   description: "猪蚊耗的笔记本",
+  dest: "build",
   theme,
   alias: {
     "@theme-hope/modules/blog/components/BlogHero": path.resolve(
       __dirname,
-      "./components/BlogHero.vue",
+      "./components/BlogHero.vue"
     ),
   },
 });
