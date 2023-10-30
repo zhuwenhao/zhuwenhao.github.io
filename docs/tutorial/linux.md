@@ -14,31 +14,23 @@ category:
 查看端口状态
 
 ```bash
-sudo firewall-cmd --query-port=6666/tcp
+$ sudo firewall-cmd --query-port=6666/tcp
 ```
 
 添加端口
 
 ```bash
-sudo firewall-cmd --add-port=6666/tcp --permanent
-```
-
-移除端口
-
-```bash
-sudo firewall-cmd --remove-port=6666/tcp --permanent
+$ sudo firewall-cmd --add-port=6666/tcp --permanent
 ```
 
 重新加载
 
 ```bash
-sudo firewall-cmd --reload
+$ sudo firewall-cmd --reload
 ```
 
-## 日志
-
-实时显示某个服务的日志
+移除端口
 
 ```bash
-sudo journalctl -u caddy -f -o json-pretty
+$ sudo firewall-cmd --remove-port=6666/tcp --permanent
 ```

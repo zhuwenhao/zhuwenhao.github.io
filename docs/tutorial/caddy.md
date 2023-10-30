@@ -11,7 +11,7 @@ category:
 
 ## 下载
 
-打开 [下载](https://caddyserver.com/download) 页面，平台选择 `Linux amd64` ，点选 `http.handlers.webhook` 模块，然后点击下载按钮
+打开 [下载](https://caddyserver.com/download) 页面，选择对应的平台，点选 `http.handlers.webhook` 模块，然后点击下载按钮
 
 ## 安装
 
@@ -53,10 +53,10 @@ $ sudo useradd --system \
 
 ## 配置
 
-创建一个名为 `example.com` 的站点目录
+创建一个名为 `foobar.com` 的站点目录
 
 ```bash
-$ sudo mkdir -p -m 777 /var/www/example.com
+$ sudo mkdir -p -m 777 /var/www/foobar.com
 ```
 
 创建一个名为 `Caddyfile` 的配置文件
@@ -69,31 +69,35 @@ $ sudo touch /etc/caddy/Caddyfile
 配置文件内容
 
 ```
-example.com, www.example.com {
-  root * /var/www/example.com
+foobar.com, www.foobar.com {
+  root * /var/www/foobar.com
   file_server
 
   encode zstd gzip
 
   route /webhook {
     webhook {
-      repo https://github.com/example/foobar.git
-      path /var/www/example.com
-      branch master
+      repo https://github.com/foo/bar.git
+      path /var/www/foobar.com
+      branch pages
       secret xxx
     }
+  }
+
+  route {
+    try_files {path} /index.html
   }
 }
 ```
 
-`xxx` 远程仓库设置中 Webhook 的 Secret
+`xxx` 为远程仓库设置中 Webhook 的 Secret
 
 ## 服务
 
-[下载](https://raw.githubusercontent.com/caddyserver/dist/master/init/caddy.service)服务文件并移动到 `/etc/systemd/system/`
+将服务文件下载到 `/etc/systemd/system`
 
 ```bash
-$ sudo mv caddy.service /etc/systemd/system/
+$ sudo wget -P /etc/systemd/system https://raw.githubusercontent.com/caddyserver/dist/master/init/caddy.service
 ```
 
 启用 `caddy` 服务
@@ -107,4 +111,10 @@ $ sudo systemctl enable --now caddy
 
 ```bash
 $ systemctl status caddy
+```
+
+## 日志
+
+```bash
+$ sudo journalctl -u caddy -f -o json-pretty
 ```
