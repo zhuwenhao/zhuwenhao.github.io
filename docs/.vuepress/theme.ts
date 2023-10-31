@@ -22,6 +22,9 @@ export default hopeTheme(
         GitLab: "https://gitlab.com/zhuwenhao",
       },
     },
+    contributors: false,
+    hideSiteNameOnMobile: false,
+    pageInfo: ["Author", "Original", "Date", "PageView", "Category", "Tag"],
     plugins: {
       blog: true,
       mdEnhance: {

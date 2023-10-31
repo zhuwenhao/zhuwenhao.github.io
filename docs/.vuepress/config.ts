@@ -15,5 +15,9 @@ export default defineUserConfig({
       __dirname,
       "./components/BlogHero.vue"
     ),
+    "@theme-hope/modules/blog/components/InfoList": path.resolve(
+      __dirname,
+      "./components/InfoList"
+    ),
   },
 });
