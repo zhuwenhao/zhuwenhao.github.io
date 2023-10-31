@@ -24,13 +24,13 @@ export default hopeTheme(
     },
     contributors: false,
     hideSiteNameOnMobile: false,
-    pageInfo: ["Author", "Original", "Date", "PageView", "Category", "Tag"],
     plugins: {
       blog: true,
       mdEnhance: {
         align: true,
         echarts: true,
       },
+      readingTime: false,
     },
   },
   {
