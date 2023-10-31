@@ -3,18 +3,19 @@ import { hopeTheme } from "vuepress-theme-hope";
 export default hopeTheme(
   {
     author: {
+      email: "m@zhuwenhao.me",
       name: "猪蚊耗",
       url: "https://zhuwenhao.me",
-      email: "m@zhuwenhao.me",
     },
-    hostname: "https://zhuwenhao.me",
-    displayFooter: true,
-    favicon: "/favicon/favicon.ico",
-    logo: "/favicon/android-chrome-512x512.png",
-    darkmode: "disable",
-    repo: "https://github.com/zhuwenhao/notebook",
-    docsDir: "docs",
     blog: {
+      articleInfo: [
+        "Author",
+        "Original",
+        "Date",
+        "PageView",
+        "Category",
+        "Tag",
+      ],
       avatar: "/images/avatar.png",
       medias: {
         Email: "mailto:m@zhuwenhao.me",
@@ -23,15 +24,22 @@ export default hopeTheme(
       },
     },
     contributors: false,
+    darkmode: "disable",
+    displayFooter: true,
+    docsDir: "docs",
+    favicon: "/favicon/favicon.ico",
     hideSiteNameOnMobile: false,
+    hostname: "https://zhuwenhao.me",
+    logo: "/favicon/android-chrome-512x512.png",
+    pageInfo: ["Author", "Original", "Date", "PageView", "Category", "Tag"],
     plugins: {
       blog: true,
       mdEnhance: {
         align: true,
         echarts: true,
       },
-      readingTime: false,
     },
+    repo: "https://github.com/zhuwenhao/notebook",
   },
   {
     custom: true,
