@@ -19,9 +19,5 @@ export default defineUserConfig({
       __dirname,
       "./components/InfoList"
     ),
-    "@theme-hope/layouts/NotFound": path.resolve(
-      __dirname,
-      "./layouts/NotFound.vue"
-    ),
   },
 });
