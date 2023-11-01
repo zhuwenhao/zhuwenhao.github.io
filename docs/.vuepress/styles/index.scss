@@ -1,0 +1,7 @@
+.theme-container {
+  &:not(.has-toc) {
+    .vp-toggle-sidebar-button {
+      display: none;
+    }
+  }
+}
