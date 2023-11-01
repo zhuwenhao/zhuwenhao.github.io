@@ -12,12 +12,16 @@ export default defineComponent({
   setup() {
     const url = ref<string | null>(null);
 
-    onMounted(async () => {
+    const getImage = async () => {
       const response = await fetch(
         "https://bing-wallpaper.vuejs.press/api/wallpaper"
       );
       const data = await (<Promise<BingWallpaperInfo[]>>response.json());
       url.value = data[0].url;
+    };
+
+    onMounted(() => {
+      getImage();
     });
 
     return (): VNode => {
