@@ -18,5 +18,4 @@ projects:
   - name: 镜像站点3
     desc: 托管于Netlify的本站镜像
     link: https://nl.zhuwenhao.me
-containerClass: hidden-mobile-sidebar-button
 ---
