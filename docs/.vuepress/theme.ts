@@ -31,6 +31,9 @@ export default hopeTheme(
     hideSiteNameOnMobile: false,
     hostname: "https://zhuwenhao.me",
     logo: "/favicon/android-chrome-512x512.png",
+    metaLocales: {
+      lastUpdated:"更新时间"
+    },
     pageInfo: ["Author", "Original", "Date", "PageView", "Category", "Tag"],
     plugins: {
       blog: true,

@@ -13,7 +13,7 @@ order: 3
 ::: echarts
 
 ```js
-const response = await fetch("https://dl.zhuwenhao.me/d/weight.json");
+const response = await fetch("https://drive.zhuwenhao.me/d/weight.json");
 const weightList = await response.json();
 const xAxisData = weightList.map((weight) => weight.date).reverse();
 const seriesDate = weightList.map((weight) => weight.weight).reverse();
