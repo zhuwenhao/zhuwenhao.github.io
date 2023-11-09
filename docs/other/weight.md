@@ -35,12 +35,6 @@ const option = {
   },
   dataZoom: [
     {
-      type: "inside",
-      start: 0,
-      end: 100,
-      minSpan: 25,
-    },
-    {
       start: 0,
       end: 100,
       minSpan: 25,
