@@ -32,7 +32,8 @@ export default hopeTheme(
     hostname: "https://zhuwenhao.me",
     logo: "/favicon/android-chrome-512x512.png",
     metaLocales: {
-      lastUpdated:"更新时间"
+      lastUpdated: "更新时间",
+      toc: "目录",
     },
     pageInfo: ["Author", "Original", "Date", "PageView", "Category", "Tag"],
     plugins: {
@@ -42,6 +43,7 @@ export default hopeTheme(
         echarts: true,
       },
     },
+    print: false,
     repo: "https://github.com/zhuwenhao/notebook",
   },
   {

@@ -13,6 +13,6 @@ projects:
     link: https://drive.zhuwenhao.me
     icon: https://zhuwenhao.me/favicon/android-chrome-512x512.png
   - name: 猪蚊耗的监控室
-    link: https://nezha.zhuwenhao.me
-    icon: https://nezha.zhuwenhao.me/static/logo.svg
+    link: https://mon.zhuwenhao.me
+    icon: https://mon.zhuwenhao.me/static/logo.svg
 ---
