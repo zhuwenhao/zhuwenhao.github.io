@@ -35,7 +35,7 @@ const option = {
   },
   dataZoom: [
     {
-      start: 0,
+      start: 76,
       end: 100,
       minSpan: 25,
       brushSelect: false,
