@@ -2,10 +2,6 @@ import { ClientOnly } from "@vuepress/client";
 import type { VNode } from "vue";
 import { defineComponent, h, onMounted, ref } from "vue";
 
-interface BingWallpaperInfo {
-  url: string;
-}
-
 export default defineComponent({
   name: "BingHeroBackground",
 
@@ -13,11 +9,8 @@ export default defineComponent({
     const url = ref<string | null>(null);
 
     const getImage = async () => {
-      const response = await fetch(
-        "https://bing-wallpaper.vuejs.press/api/wallpaper"
-      );
-      const data = await (<Promise<BingWallpaperInfo[]>>response.json());
-      url.value = data[0].url;
+      const response = await fetch("https://api.zhuwenhao.me/bing");
+      url.value = await (<Promise<string>>response.text());
     };
 
     onMounted(() => {
