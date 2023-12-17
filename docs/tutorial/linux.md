@@ -12,6 +12,12 @@ order: 2
 
 ## 防火墙
 
+查看开放的端口
+
+```bash
+$ sudo firewall-cmd --list-ports
+```
+
 查看端口状态
 
 ```bash
