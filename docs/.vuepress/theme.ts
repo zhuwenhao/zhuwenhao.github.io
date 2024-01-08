@@ -9,7 +9,6 @@ export default hopeTheme(
     },
     blog: {
       articleInfo: [
-        "Author",
         "Original",
         "Date",
         "PageView",
@@ -35,7 +34,7 @@ export default hopeTheme(
       lastUpdated: "更新时间",
       toc: "目录",
     },
-    pageInfo: ["Author", "Original", "Date", "PageView", "Category", "Tag"],
+    pageInfo: ["Original", "Date", "PageView", "Category", "Tag"],
     plugins: {
       blog: true,
       mdEnhance: {
