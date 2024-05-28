@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -109,6 +113,16 @@
 </head>
 <body>
 
+<!-- <div id="nav">
+  <ul>
+    <li><a class="a1" href="#">首页</a></li>
+    <li><a class="a2" href="#">分类</a></li>
+    <li><a href="#">标签</a></li>
+    <li><a href="#">关于</a></li>
+  </ul>
+  <span>|</span>
+</div> -->
+
 <div class="search-container">
   <input type="text" id="search-input" placeholder="搜索文章...">
   <ul id="results-container"></ul>
@@ -210,15 +224,6 @@
     return highlightedText;
   }
 
-  function extractContext(text, indices, contextLength = 20) {
-    const start = Math.max(0, indices[0][0] - contextLength);
-    const end = Math.min(text.length, indices[0][1] + contextLength);
-    let context = text.slice(start, end);
-    if (start > 0) context = '...' + context;
-    if (end < text.length) context = context + '...';
-    return context;
-  }
-
   function search(query) {
     var results = fuse.search(query);
     displayResults(results);
@@ -234,20 +239,19 @@
         const matches = result.matches;
 
         let title = item.title;
-        let context = '';
+        let content = item.content.substring(0, 100) + '...';
 
         matches.forEach(match => {
           if (match.key === 'title') {
             title = highlight(title, match.indices);
           }
           if (match.key === 'content') {
-            context = extractContext(item.content, match.indices);
-            context = highlight(context, match.indices);
+            content = highlight(content, match.indices);
           }
         });
 
         var listItem = document.createElement('li');
-        listItem.innerHTML = `<a href="${item.url}">${title}</a><p>${context}</p>`;
+        listItem.innerHTML = `<a href="${item.url}">${title}</a><p>${content}</p>`;
         searchResults.appendChild(listItem);
       });
     } else {
