@@ -113,16 +113,6 @@ layout: default
 </head>
 <body>
 
-<!-- <div id="nav">
-  <ul>
-    <li><a class="a1" href="#">首页</a></li>
-    <li><a class="a2" href="#">分类</a></li>
-    <li><a href="#">标签</a></li>
-    <li><a href="#">关于</a></li>
-  </ul>
-  <span>|</span>
-</div> -->
-
 <div class="search-container">
   <input type="text" id="search-input" placeholder="搜索文章...">
   <ul id="results-container"></ul>
@@ -153,7 +143,7 @@ layout: default
       </div>
 
       <div class="entry">
-        {{ post.excerpt | truncate: 200 }}
+        {{ post.content | strip_html | strip_newlines | truncatewords: 100 }}
       </div>
 
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">阅读更多</a>
@@ -162,34 +152,7 @@ layout: default
   {% endfor %}
 </div>
 
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <span class="prev">
-      <a href="{{ site.baseurl }}{{ paginator.previous_page_path }}" class="prev">
-        ← 上一页
-      </a>
-    </span>
-  {% endif %}
-  {% if paginator.next_page %}
-    <span class="next">
-      <a href="{{ site.baseurl}}{{ paginator.next_page_path }}" class="next">
-        下一页 →
-      </a>
-    </span>
-  {% endif %}
-</div>
-
-<!-- 不算子网站访客统计 -->
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div align="center">
-  <span id="busuanzi_container_site_pv" style="font-family: Consolas; color: Silver; font-size: 12px;">
-    浏览量:<span id="busuanzi_value_site_pv" style="font-family: Consolas; color: Silver; font-size: 12px;"></span>
-  </span>
-  <span id="busuanzi_container_site_uv" style="font-family: Consolas; color: Silver; font-size: 12px;">
-    访客数:<span id="busuanzi_value_site_uv" style="font-family: Consolas; color: Silver; font-size: 12px;"></span>
-  </span>
-</div>
-
+<!-- 引入 Fuse.js 库 -->
 <script src="{{ site.baseurl }}/js/fuse.min.js"></script>
 <script>
   var data = [
@@ -200,13 +163,15 @@ layout: default
         "tags": "{{ post.tags | join: ', ' }}",
         "url": "{{ site.baseurl }}{{ post.url }}",
         "date": "{{ post.date }}",
-        "content": "{{ post.content | strip_html | strip_newlines | escape }}"
+        "content": {
+          "content": "{{ post.content | strip_html | strip_newlines | escape }}"
+        }
       } {% unless forloop.last %},{% endunless %}
     {% endfor %}
   ];
 
   var options = {
-    keys: ['title', 'category', 'tags', 'content'],
+    keys: ['title', 'category', 'tags', 'content.content'],
     threshold: 0.3,
     includeMatches: true
   };
@@ -239,13 +204,13 @@ layout: default
         const matches = result.matches;
 
         let title = item.title;
-        let content = item.content.substring(0, 100) + '...';
+        let content = item.content.content.substring(0, 200) + '...';
 
         matches.forEach(match => {
           if (match.key === 'title') {
             title = highlight(title, match.indices);
           }
-          if (match.key === 'content') {
+          if (match.key === 'content.content') {
             content = highlight(content, match.indices);
           }
         });
