@@ -53,7 +53,6 @@
 <h2>基础配置结构</h2>
 <pre><code class="language-lua">-- ~/.config/nvim/init.lua
 
--- 基础设置
 vim.g.mapleader = &quot; &quot;
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -65,8 +64,7 @@ vim.opt.termguicolors = true
 vim.opt.signcolumn = &quot;yes&quot;
 </code></pre>
 <h2>插件管理器：lazy.nvim</h2>
-<pre><code class="language-lua">-- 安装 lazy.nvim
-local lazypath = vim.fn.stdpath(&quot;data&quot;) .. &quot;/lazy/lazy.nvim&quot;
+<pre><code class="language-lua">local lazypath = vim.fn.stdpath(&quot;data&quot;) .. &quot;/lazy/lazy.nvim&quot;
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
     &quot;git&quot;, &quot;clone&quot;, &quot;--filter=blob:none&quot;,
@@ -77,21 +75,16 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require(&quot;lazy&quot;).setup({
-  -- 主题
   { &quot;folke/tokyonight.nvim&quot; },
-  -- LSP
   { &quot;neovim/nvim-lspconfig&quot; },
-  -- 补全
   { &quot;hrsh7th/nvim-cmp&quot; },
-  -- 文件搜索
   { &quot;nvim-telescope/telescope.nvim&quot; },
-  -- 文件树
   { &quot;nvim-tree/nvim-tree.lua&quot; },
 })
 </code></pre>
 <h2>总结</h2>
 <blockquote>
-<p>Neovim 的配置是一次性投入、长期受益的事情。刚开始可能需要花一些时间，但一旦配置好，编码效率会有质的飞跃。推荐使用已有的 distribution（如 LazyVim、AstroNvim）作为起点。</p>
+<p>Neovim 的配置是一次性投入、长期受益的事情。推荐使用已有的 distribution（如 LazyVim、AstroNvim）作为起点。</p>
 </blockquote>
 
       </div>

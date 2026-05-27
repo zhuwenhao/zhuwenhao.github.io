@@ -26,7 +26,7 @@ const POSTS = [
       "JavaScript"
     ],
     "category": "前端开发",
-    "excerpt": "深入讲解 Node.js 的 fs 模块，涵盖文件读写、目录操作、流处理、文件监听等核心功能，附带大量实用代码示例和最佳实践。",
+    "excerpt": "深入讲解 Node.js 的 fs 模块，涵盖文件读写、目录操作、流处理等核心功能，附带大量实用代码示例。",
     "cover": "https://picsum.photos/seed/nodejs-fs-guide/480/360",
     "file": "posts/nodejs-fs-guide.html"
   },
@@ -52,7 +52,7 @@ const POSTS = [
       "前端"
     ],
     "category": "前端开发",
-    "excerpt": "CSS Grid 是现代网页布局的利器。本文通过多个实战案例，从基础概念到高级用法，帮助你掌握 CSS Grid 的核心技巧。",
+    "excerpt": "CSS Grid 是现代网页布局的利器。本文通过多个实战案例，帮助你掌握 CSS Grid 的核心技巧。",
     "cover": "https://picsum.photos/seed/css-grid-layout/480/360",
     "file": "posts/css-grid-layout.html"
   },
@@ -91,7 +91,7 @@ const POSTS = [
       "算法"
     ],
     "category": "算法",
-    "excerpt": "常用技巧  1. 双指针 适用于有序数组、原地操作等场景。经典题目：两数之和（排序后）、移除元素、合并有序数组。 javascript // 例：移除有序数组中...",
+    "excerpt": "常用技巧  1. 双指针 适用于有序数组、原地操作等场景： javascript // 移除有序数组中的重复元素 function removeDuplicat...",
     "cover": "https://picsum.photos/seed/leetcode-array/480/360",
     "file": "posts/leetcode-array.html"
   },

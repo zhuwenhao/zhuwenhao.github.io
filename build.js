@@ -269,11 +269,30 @@ function main() {
   // 生成 posts-data.js
   generatePostsData(posts);
 
+  // 清理：删除 posts/ 中没有对应 .md 的旧 HTML 文件
+  const validIds = new Set(posts.map(function (p) { return p.id + ".html"; }));
+  const existingHtml = fs.readdirSync(POSTS_OUTPUT_DIR).filter(function (f) { return f.endsWith(".html"); });
+  let cleaned = 0;
+  existingHtml.forEach(function (f) {
+    if (!validIds.has(f)) {
+      fs.unlinkSync(path.join(POSTS_OUTPUT_DIR, f));
+      cleaned++;
+      console.log("  清理: 删除 posts/" + f);
+    }
+  });
+  if (cleaned > 0) {
+    console.log("");
+    console.log("[清理] 已删除 " + cleaned + " 个过期 HTML 文件");
+  }
+
   console.log("");
   console.log("====================================");
   console.log("  构建完成！");
   console.log("  成功: " + success + " 篇");
   console.log("  总计: " + files.length + " 篇");
+  if (cleaned > 0) {
+    console.log("  清理: " + cleaned + " 篇");
+  }
   console.log("====================================");
   console.log("");
   console.log("下一步：双击 D:\\blog\\index.html 在浏览器中查看博客");

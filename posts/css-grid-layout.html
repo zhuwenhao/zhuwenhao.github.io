@@ -59,7 +59,6 @@
   min-height: 100vh;
 }
 </code></pre>
-<p>上面的代码创建了一个经典的三栏布局：左 sidebar（200px）、中间内容区（自适应）、右 sidebar（200px），加上顶部导航栏和底部页脚。</p>
 <h2>常用属性</h2>
 <h3>grid-template-columns / rows</h3>
 <pre><code class="language-css">/* 固定列宽 */
@@ -67,9 +66,6 @@ grid-template-columns: 200px 200px 200px;
 
 /* 自适应列宽（等分） */
 grid-template-columns: 1fr 1fr 1fr;
-
-/* repeat 简写 */
-grid-template-columns: repeat(3, 1fr);
 
 /* 自动填充 */
 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -85,12 +81,11 @@ grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 .header  { grid-area: header; }
 .sidebar { grid-area: sidebar; }
 .main    { grid-area: main; }
-.aside   { grid-area: aside; }
 .footer  { grid-area: footer; }
 </code></pre>
 <h2>总结</h2>
 <blockquote>
-<p>CSS Grid + Flexbox 是现代前端布局的最佳组合。Grid 负责宏观布局（页面结构），Flexbox 负责微观布局（组件内部排列）。掌握这两个工具，几乎可以搞定所有布局需求。</p>
+<p>CSS Grid + Flexbox 是现代前端布局的最佳组合。Grid 负责宏观布局，Flexbox 负责微观布局。</p>
 </blockquote>
 
       </div>
