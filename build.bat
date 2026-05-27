@@ -7,6 +7,8 @@ echo ====================================
 echo   1/3 构建博客...
 echo ====================================
 echo.
+:: 确保 D:\nodejs 在 PATH 中（兼容不同环境）
+set "PATH=D:\nodejs;%PATH%"
 node build.js
 if %errorlevel% neq 0 (
     echo.
