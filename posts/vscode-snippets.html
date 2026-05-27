@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VSCode 自定义代码片段提升开发效率 - My Blog</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../index.html" class="navbar-brand">My Blog</a>
+      <ul class="navbar-links" id="navLinks">
+        <li><a href="../index.html">首页</a></li>
+        <li><a href="../archives.html">归档</a></li>
+        <li><a href="../categories.html">分类</a></li>
+        <li><a href="../tags.html">标签</a></li>
+        <li><a href="../about.html">关于</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <button id="searchBtn" title="搜索">&#128269;</button>
+        <button id="themeBtn" title="切换主题">&#9790;</button>
+        <button class="menu-toggle" id="menuToggle">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-modal">
+      <div class="search-modal-header">
+        <h3>搜索文章</h3>
+        <button class="search-modal-close" id="searchClose">&times;</button>
+      </div>
+      <div class="search-input-wrap">
+        <input type="text" id="searchInput" placeholder="输入关键词搜索..." autocomplete="off">
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+  <main class="main-container">
+    <article class="article-content">
+      <div class="article-header">
+        <a href="../index.html" style="font-size:0.85rem;color:var(--fg-light);">&#8592; 返回首页</a>
+        <h1>VSCode 自定义代码片段提升开发效率</h1>
+        <div class="article-meta">
+          <span>2026-05-10</span>
+          <span class="category">开发工具</span>
+          <span>#VSCode #效率</span>
+        </div>
+      </div>
+      <div class="article-body">
+        <h2>什么是代码片段</h2>
+<p>VSCode 的代码片段（Snippets）功能允许你定义模板代码，通过输入简短的前缀触发键即可快速插入完整的代码结构。它可以大幅减少重复性代码的输入，提升开发效率。</p>
+<h2>如何创建自定义片段</h2>
+<ol>
+<li>打开命令面板：<code>Ctrl+Shift+P</code></li>
+<li>输入 &quot;Preferences: Configure User Snippets&quot;</li>
+<li>选择语言（如 javascript.json）或创建全局片段</li>
+<li>在打开的 JSON 文件中编写片段定义</li>
+</ol>
+<h2>片段语法详解</h2>
+<pre><code class="language-json">{
+  &quot;Console Log&quot;: {
+    &quot;prefix&quot;: &quot;clg&quot;,
+    &quot;body&quot;: [
+      &quot;console.log(&#39;$1&#39;);&quot;,
+      &quot;$2&quot;
+    ],
+    &quot;description&quot;: &quot;插入 console.log 语句&quot;
+  },
+  &quot;React Component&quot;: {
+    &quot;prefix&quot;: &quot;rfc&quot;,
+    &quot;body&quot;: [
+      &quot;import React from &#39;react&#39;;&quot;,
+      &quot;&quot;,
+      &quot;const ${1:ComponentName} = () =&gt; {&quot;,
+      &quot;  return (&quot;,
+      &quot;    &lt;div&gt;&quot;,
+      &quot;      ${2:// content}&quot;,
+      &quot;    &lt;/div&gt;&quot;,
+      &quot;  );&quot;,
+      &quot;};&quot;,
+      &quot;&quot;,
+      &quot;export default ${1:ComponentName};&quot;
+    ],
+    &quot;description&quot;: &quot;创建 React 函数组件&quot;
+  }
+}
+</code></pre>
+<h2>常用占位符</h2>
+<ul>
+<li><code>$1</code>, <code>$2</code> — 光标跳转位置（数字表示顺序）</li>
+<li><code>${1:default}</code> — 带默认值的占位符</li>
+<li><code>$TM_FILENAME</code> — 当前文件名</li>
+<li><code>$CURRENT_DATE</code> — 当前日期</li>
+<li><code>$CLIPBOARD</code> — 剪贴板内容</li>
+</ul>
+<h2>总结</h2>
+<blockquote>
+<p>善用代码片段，每天可以为你节省大量重复输入的时间。建议将日常开发中最常用的代码模式整理成片段，积少成多，效率提升非常明显。</p>
+</blockquote>
+
+      </div>
+    </article>
+  </main>
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="https://github.com" target="_blank">GitHub</a>
+      <a href="mailto:your@email.com">Email</a>
+    </div>
+    <p>&copy; 2026 My Blog. All rights reserved.</p>
+  </footer>
+  <button class="back-to-top" id="backToTop" title="返回顶部">&#8679;</button>
+  <script src="../js/posts-data.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

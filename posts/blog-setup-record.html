@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>搭建个人博客的完整记录 - My Blog</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../index.html" class="navbar-brand">My Blog</a>
+      <ul class="navbar-links" id="navLinks">
+        <li><a href="../index.html">首页</a></li>
+        <li><a href="../archives.html">归档</a></li>
+        <li><a href="../categories.html">分类</a></li>
+        <li><a href="../tags.html">标签</a></li>
+        <li><a href="../about.html">关于</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <button id="searchBtn" title="搜索">&#128269;</button>
+        <button id="themeBtn" title="切换主题">&#9790;</button>
+        <button class="menu-toggle" id="menuToggle">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-modal">
+      <div class="search-modal-header">
+        <h3>搜索文章</h3>
+        <button class="search-modal-close" id="searchClose">&times;</button>
+      </div>
+      <div class="search-input-wrap">
+        <input type="text" id="searchInput" placeholder="输入关键词搜索..." autocomplete="off">
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+  <main class="main-container">
+    <article class="article-content">
+      <div class="article-header">
+        <a href="../index.html" style="font-size:0.85rem;color:var(--fg-light);">&#8592; 返回首页</a>
+        <h1>搭建个人博客的完整记录</h1>
+        <div class="article-meta">
+          <span>2026-04-10</span>
+          <span class="category">日常</span>
+          <span>#博客 #记录</span>
+        </div>
+      </div>
+      <div class="article-body">
+        <h2>为什么搭建博客</h2>
+<p>作为一名开发者，拥有一个个人博客是很有价值的。它不仅是记录学习笔记的工具，也是展示个人技术能力的名片。在这篇文章中，我记录了从零搭建博客的完整过程。</p>
+<h2>技术选型</h2>
+<p>我选择了纯 HTML/CSS/JS 方案，原因是：</p>
+<ul>
+<li>无需构建工具，零依赖</li>
+<li>完全可定制，不受主题限制</li>
+<li>加载速度快，SEO 友好</li>
+<li>可以部署在任何静态服务器上</li>
+</ul>
+<h2>博客结构</h2>
+<pre><code>D:\blog\
+  index.html          # 首页
+  archives.html       # 归档页
+  categories.html     # 分类页
+  tags.html           # 标签页
+  about.html          # 关于页
+  css/
+    style.css         # 全局样式
+  js/
+    posts-data.js     # 文章数据（由构建脚本自动生成）
+    main.js           # 核心逻辑
+  posts/
+    article-1.html    # 文章详情页（由构建脚本自动生成）
+    ...
+  md-posts/           # ← 在这里放 .md 文件
+    article-1.md
+    article-2.md
+    ...
+  build.js            # 构建脚本
+  build.bat           # 双击运行构建
+</code></pre>
+<h2>功能清单</h2>
+<ul>
+<li>卡片式文章列表，带封面图和标签</li>
+<li>暗色/亮色主题切换</li>
+<li>全文搜索功能（Ctrl+K 快捷键）</li>
+<li>按标签、分类筛选文章</li>
+<li>时间线归档</li>
+<li>响应式设计，移动端适配</li>
+<li>分页导航</li>
+</ul>
+<h2>写文章的工作流</h2>
+<ol>
+<li>在 <code>md-posts/</code> 目录下创建一个 <code>.md</code> 文件</li>
+<li>文件开头写 frontmatter（标题、日期、标签等）</li>
+<li>下面写正文（Markdown 格式）</li>
+<li>双击 <code>build.bat</code> 构建博客</li>
+<li>刷新浏览器查看效果</li>
+</ol>
+<h2>总结</h2>
+<blockquote>
+<p>搭建博客的目的是为了记录和分享。不要过度追求完美的主题和工具，先用起来、写起来，才是最重要的。</p>
+</blockquote>
+
+      </div>
+    </article>
+  </main>
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="https://github.com" target="_blank">GitHub</a>
+      <a href="mailto:your@email.com">Email</a>
+    </div>
+    <p>&copy; 2026 My Blog. All rights reserved.</p>
+  </footer>
+  <button class="back-to-top" id="backToTop" title="返回顶部">&#8679;</button>
+  <script src="../js/posts-data.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blog</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand">My Blog</a>
+      <ul class="navbar-links" id="navLinks">
+        <li><a href="index.html" class="active">首页</a></li>
+        <li><a href="archives.html">归档</a></li>
+        <li><a href="categories.html">分类</a></li>
+        <li><a href="tags.html">标签</a></li>
+        <li><a href="about.html">关于</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <button id="searchBtn" title="搜索">&#128269;</button>
+        <button id="themeBtn" title="切换主题">&#9790;</button>
+        <button class="menu-toggle" id="menuToggle">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 搜索弹窗 -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-modal">
+      <div class="search-modal-header">
+        <h3>搜索文章</h3>
+        <button class="search-modal-close" id="searchClose">&times;</button>
+      </div>
+      <div class="search-input-wrap">
+        <input type="text" id="searchInput" placeholder="输入关键词搜索..." autocomplete="off">
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <!-- 主内容 -->
+  <main class="main-container" id="board">
+
+    <div class="page-header">
+      <h1>最新文章</h1>
+      <p>记录技术与生活的点滴</p>
+    </div>
+
+    <!-- 文章卡片列表 -->
+    <div id="postList"></div>
+
+    <!-- 分页 -->
+    <div class="pagination" id="pagination"></div>
+
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="https://github.com" target="_blank">GitHub</a>
+      <a href="mailto:your@email.com">Email</a>
+    </div>
+    <p>&copy; 2026 My Blog. All rights reserved.</p>
+  </footer>
+
+  <!-- 返回顶部 -->
+  <button class="back-to-top" id="backToTop" title="返回顶部">&#8679;</button>
+
+  <script src="js/posts-data.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

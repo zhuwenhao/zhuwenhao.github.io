@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python 数据分析入门：Pandas 基础教程 - My Blog</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../index.html" class="navbar-brand">My Blog</a>
+      <ul class="navbar-links" id="navLinks">
+        <li><a href="../index.html">首页</a></li>
+        <li><a href="../archives.html">归档</a></li>
+        <li><a href="../categories.html">分类</a></li>
+        <li><a href="../tags.html">标签</a></li>
+        <li><a href="../about.html">关于</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <button id="searchBtn" title="搜索">&#128269;</button>
+        <button id="themeBtn" title="切换主题">&#9790;</button>
+        <button class="menu-toggle" id="menuToggle">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-modal">
+      <div class="search-modal-header">
+        <h3>搜索文章</h3>
+        <button class="search-modal-close" id="searchClose">&times;</button>
+      </div>
+      <div class="search-input-wrap">
+        <input type="text" id="searchInput" placeholder="输入关键词搜索..." autocomplete="off">
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+  <main class="main-container">
+    <article class="article-content">
+      <div class="article-header">
+        <a href="../index.html" style="font-size:0.85rem;color:var(--fg-light);">&#8592; 返回首页</a>
+        <h1>Python 数据分析入门：Pandas 基础教程</h1>
+        <div class="article-meta">
+          <span>2026-04-28</span>
+          <span class="category">数据科学</span>
+          <span>#Python #数据分析</span>
+        </div>
+      </div>
+      <div class="article-body">
+        <h2>Pandas 简介</h2>
+<p>Pandas 是 Python 中最流行的数据分析库，提供了 DataFrame 和 Series 两种核心数据结构，让数据处理变得简单高效。</p>
+<h2>安装</h2>
+<pre><code class="language-bash">pip install pandas
+</code></pre>
+<h2>DataFrame 基本操作</h2>
+<pre><code class="language-python">import pandas as pd
+
+# 从字典创建 DataFrame
+data = {
+    &#39;name&#39;: [&#39;Alice&#39;, &#39;Bob&#39;, &#39;Charlie&#39;],
+    &#39;age&#39;: [25, 30, 35],
+    &#39;score&#39;: [85.5, 92.0, 78.5]
+}
+df = pd.DataFrame(data)
+
+# 查看前几行
+print(df.head())
+
+# 查看基本信息
+print(df.info())
+print(df.describe())
+
+# 选择列
+print(df[&#39;name&#39;])
+print(df[[&#39;name&#39;, &#39;score&#39;]])
+
+# 条件筛选
+print(df[df[&#39;age&#39;] &gt; 28])
+
+# 排序
+print(df.sort_values(&#39;score&#39;, ascending=False))
+</code></pre>
+<h2>数据清洗</h2>
+<pre><code class="language-python"># 处理缺失值
+df.isnull()          # 检查缺失值
+df.fillna(0)         # 填充缺失值
+df.dropna()          # 删除缺失值行
+
+# 去重
+df.drop_duplicates()
+
+# 类型转换
+df[&#39;age&#39;] = df[&#39;age&#39;].astype(float)
+</code></pre>
+<h2>分组聚合</h2>
+<pre><code class="language-python"># 按 category 分组并计算均值
+result = df.groupby(&#39;category&#39;).agg({
+    &#39;score&#39;: [&#39;mean&#39;, &#39;max&#39;, &#39;min&#39;],
+    &#39;age&#39;: &#39;count&#39;
+})
+print(result)
+</code></pre>
+<h2>总结</h2>
+<blockquote>
+<p>Pandas 的学习曲线平缓，但功能非常强大。建议通过实际项目来学习，处理真实数据的过程中你会自然而然地掌握这些技能。</p>
+</blockquote>
+
+      </div>
+    </article>
+  </main>
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="https://github.com" target="_blank">GitHub</a>
+      <a href="mailto:your@email.com">Email</a>
+    </div>
+    <p>&copy; 2026 My Blog. All rights reserved.</p>
+  </footer>
+  <button class="back-to-top" id="backToTop" title="返回顶部">&#8679;</button>
+  <script src="../js/posts-data.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

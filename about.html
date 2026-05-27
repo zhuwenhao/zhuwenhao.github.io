@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于 - My Blog</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand">My Blog</a>
+      <ul class="navbar-links" id="navLinks">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="archives.html">归档</a></li>
+        <li><a href="categories.html">分类</a></li>
+        <li><a href="tags.html">标签</a></li>
+        <li><a href="about.html" class="active">关于</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <button id="searchBtn" title="搜索">&#128269;</button>
+        <button id="themeBtn" title="切换主题">&#9790;</button>
+        <button class="menu-toggle" id="menuToggle">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-modal">
+      <div class="search-modal-header">
+        <h3>搜索文章</h3>
+        <button class="search-modal-close" id="searchClose">&times;</button>
+      </div>
+      <div class="search-input-wrap">
+        <input type="text" id="searchInput" placeholder="输入关键词搜索..." autocomplete="off">
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+  <main class="main-container">
+    <div class="about-card">
+      <div class="about-avatar">&#128187;</div>
+      <h2>你的名字</h2>
+      <p class="bio">一个热爱技术的开发者，在这里记录学习与成长的点滴。</p>
+
+      <div class="about-info">
+        <div class="about-info-item">
+          <div class="label">位置</div>
+          <div class="value">中国</div>
+        </div>
+        <div class="about-info-item">
+          <div class="label">职业</div>
+          <div class="value">全栈开发</div>
+        </div>
+        <div class="about-info-item">
+          <div class="label">兴趣</div>
+          <div class="value">编程 / LLM / 开源</div>
+        </div>
+        <div class="about-info-item">
+          <div class="label">邮箱</div>
+          <div class="value">your@email.com</div>
+        </div>
+      </div>
+
+      <p style="color:var(--fg-secondary);font-size:0.92rem;line-height:1.8;">
+        欢迎来到我的个人博客！这里主要记录我在软件开发过程中的学习笔记、技术总结和一些日常思考。
+        我对前端开发、后端架构、AI/LLM 应用等领域都有浓厚的兴趣，希望这些内容对你有所帮助。
+      </p>
+
+      <div class="about-social">
+        <a href="https://github.com" target="_blank" title="GitHub">&#128187;</a>
+        <a href="mailto:your@email.com" title="Email">&#9993;</a>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="https://github.com" target="_blank">GitHub</a>
+      <a href="mailto:your@email.com">Email</a>
+    </div>
+    <p>&copy; 2026 My Blog. All rights reserved.</p>
+  </footer>
+  <button class="back-to-top" id="backToTop" title="返回顶部">&#8679;</button>
+  <script src="js/posts-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

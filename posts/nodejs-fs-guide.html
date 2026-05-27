@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Node.js 文件系统操作完全指南 - My Blog</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../index.html" class="navbar-brand">My Blog</a>
+      <ul class="navbar-links" id="navLinks">
+        <li><a href="../index.html">首页</a></li>
+        <li><a href="../archives.html">归档</a></li>
+        <li><a href="../categories.html">分类</a></li>
+        <li><a href="../tags.html">标签</a></li>
+        <li><a href="../about.html">关于</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <button id="searchBtn" title="搜索">&#128269;</button>
+        <button id="themeBtn" title="切换主题">&#9790;</button>
+        <button class="menu-toggle" id="menuToggle">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-modal">
+      <div class="search-modal-header">
+        <h3>搜索文章</h3>
+        <button class="search-modal-close" id="searchClose">&times;</button>
+      </div>
+      <div class="search-input-wrap">
+        <input type="text" id="searchInput" placeholder="输入关键词搜索..." autocomplete="off">
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+  <main class="main-container">
+    <article class="article-content">
+      <div class="article-header">
+        <a href="../index.html" style="font-size:0.85rem;color:var(--fg-light);">&#8592; 返回首页</a>
+        <h1>Node.js 文件系统操作完全指南</h1>
+        <div class="article-meta">
+          <span>2026-05-15</span>
+          <span class="category">前端开发</span>
+          <span>#Node.js #JavaScript</span>
+        </div>
+      </div>
+      <div class="article-body">
+        <h2>前言</h2>
+<p>Node.js 的 <code>fs</code> 模块是进行文件系统操作的核心模块。无论是读取配置文件、写入日志、创建目录，还是监听文件变化，fs 模块都能胜任。本文将全面介绍 fs 模块的常用功能。</p>
+<h2>同步 vs 异步</h2>
+<p>fs 模块的所有方法都有同步和异步两个版本：</p>
+<pre><code class="language-javascript">const fs = require(&#39;fs&#39;);
+
+// 异步读取（推荐，不阻塞事件循环）
+fs.readFile(&#39;file.txt&#39;, &#39;utf8&#39;, (err, data) =&gt; {
+  if (err) throw err;
+  console.log(data);
+});
+
+// 同步读取（简单场景可用）
+try {
+  const data = fs.readFileSync(&#39;file.txt&#39;, &#39;utf8&#39;);
+  console.log(data);
+} catch (err) {
+  console.error(err);
+}
+
+// Promise 版本（现代推荐）
+const fsPromises = require(&#39;fs/promises&#39;);
+const data = await fsPromises.readFile(&#39;file.txt&#39;, &#39;utf8&#39;);
+</code></pre>
+<h2>常用操作</h2>
+<h3>文件读写</h3>
+<pre><code class="language-javascript">// 写入文件
+await fsPromises.writeFile(&#39;output.txt&#39;, &#39;Hello World&#39;);
+
+// 追加内容
+await fsPromises.appendFile(&#39;output.txt&#39;, &#39;\nNew line&#39;);
+
+// 读取文件
+const content = await fsPromises.readFile(&#39;output.txt&#39;, &#39;utf8&#39;);
+</code></pre>
+<h3>目录操作</h3>
+<pre><code class="language-javascript">// 创建目录（递归）
+await fsPromises.mkdir(&#39;a/b/c&#39;, { recursive: true });
+
+// 读取目录内容
+const files = await fsPromises.readdir(&#39;./&#39;);
+
+// 检查文件/目录是否存在
+const stat = await fsPromises.stat(&#39;file.txt&#39;);
+console.log(stat.isFile());     // true
+console.log(stat.isDirectory()); // false
+</code></pre>
+<h3>文件流处理</h3>
+<p>对于大文件，使用流（Stream）可以避免一次性加载到内存：</p>
+<pre><code class="language-javascript">const { createReadStream, createWriteStream } = require(&#39;fs&#39;);
+
+// 复制大文件
+const readStream = createReadStream(&#39;large-file.zip&#39;);
+const writeStream = createWriteStream(&#39;copy.zip&#39;);
+readStream.pipe(writeStream);
+</code></pre>
+<h2>总结</h2>
+<blockquote>
+<p>在实际项目中，推荐使用 <code>fs/promises</code> 的 async/await 写法，代码更清晰、更不容易出错。对于大文件操作，务必使用 Stream 来避免内存溢出。</p>
+</blockquote>
+
+      </div>
+    </article>
+  </main>
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="https://github.com" target="_blank">GitHub</a>
+      <a href="mailto:your@email.com">Email</a>
+    </div>
+    <p>&copy; 2026 My Blog. All rights reserved.</p>
+  </footer>
+  <button class="back-to-top" id="backToTop" title="返回顶部">&#8679;</button>
+  <script src="../js/posts-data.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

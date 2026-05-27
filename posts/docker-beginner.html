@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docker 容器化入门指南 - My Blog</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../index.html" class="navbar-brand">My Blog</a>
+      <ul class="navbar-links" id="navLinks">
+        <li><a href="../index.html">首页</a></li>
+        <li><a href="../archives.html">归档</a></li>
+        <li><a href="../categories.html">分类</a></li>
+        <li><a href="../tags.html">标签</a></li>
+        <li><a href="../about.html">关于</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <button id="searchBtn" title="搜索">&#128269;</button>
+        <button id="themeBtn" title="切换主题">&#9790;</button>
+        <button class="menu-toggle" id="menuToggle">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-modal">
+      <div class="search-modal-header">
+        <h3>搜索文章</h3>
+        <button class="search-modal-close" id="searchClose">&times;</button>
+      </div>
+      <div class="search-input-wrap">
+        <input type="text" id="searchInput" placeholder="输入关键词搜索..." autocomplete="off">
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+  <main class="main-container">
+    <article class="article-content">
+      <div class="article-header">
+        <a href="../index.html" style="font-size:0.85rem;color:var(--fg-light);">&#8592; 返回首页</a>
+        <h1>Docker 容器化入门指南</h1>
+        <div class="article-meta">
+          <span>2026-04-20</span>
+          <span class="category">运维部署</span>
+          <span>#Docker #DevOps</span>
+        </div>
+      </div>
+      <div class="article-body">
+        <h2>什么是 Docker</h2>
+<p>Docker 是一个开源的容器化平台，它允许你将应用及其依赖打包成一个轻量级、可移植的容器，确保在任何环境中都能一致运行。</p>
+<h2>核心概念</h2>
+<ul>
+<li><strong>镜像（Image）</strong>：只读模板，包含创建容器所需的所有文件</li>
+<li><strong>容器（Container）</strong>：镜像的运行实例</li>
+<li><strong>Dockerfile</strong>：定义镜像构建步骤的脚本</li>
+<li><strong>Docker Compose</strong>：定义和管理多容器应用</li>
+</ul>
+<h2>常用命令</h2>
+<pre><code class="language-bash"># 拉取镜像
+docker pull node:18-alpine
+
+# 运行容器
+docker run -d -p 3000:3000 --name my-app node:18-alpine
+
+# 查看运行中的容器
+docker ps
+
+# 停止容器
+docker stop my-app
+
+# 构建镜像
+docker build -t my-app:v1 .
+
+# Docker Compose
+docker-compose up -d
+docker-compose down
+</code></pre>
+<h2>编写 Dockerfile</h2>
+<pre><code class="language-dockerfile">FROM node:18-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD [&quot;npm&quot;, &quot;start&quot;]
+</code></pre>
+<h2>总结</h2>
+<blockquote>
+<p>Docker 的核心理念是&quot;一次构建，到处运行&quot;。它解决了&quot;在我电脑上能跑&quot;的经典问题，是现代 DevOps 和微服务架构的基础设施。</p>
+</blockquote>
+
+      </div>
+    </article>
+  </main>
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="https://github.com" target="_blank">GitHub</a>
+      <a href="mailto:your@email.com">Email</a>
+    </div>
+    <p>&copy; 2026 My Blog. All rights reserved.</p>
+  </footer>
+  <button class="back-to-top" id="backToTop" title="返回顶部">&#8679;</button>
+  <script src="../js/posts-data.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
